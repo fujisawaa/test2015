@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+
+html:not(:target){
+font-size:16px;
+}
+
+
+/* reset and setting
+-----------------------------------------------*/
+*{
+margin:0;
+padding:0;
+}
+
+body{
+font-size:13px;
+line-height:1.6;
+background:#fff;
+color:#333333;
+font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+font-size:100%;
+font-weight:normal;
+}
+
+p{
+margin-bottom:12px;
+}
+
+table{
+margin-bottom:12px;
+border-spacing:0;
+border-collapse:collapse;
+table-layout:fixed;
+}
+
+ul{
+margin-bottom:12px;
+}
+ul li{
+list-style:none;
+line-height:1.4;
+}
+
+ol{
+margin:0 0 12px 1.5em;
+list-style:decimal outside;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol,
+table ul,
+table ol{
+margin-bottom:0;
+}
+
+dl{
+margin-bottom:12px;
+}
+
+strong,
+em{
+font-weight:bold;
+font-style:normal;
+}
+
+img{
+border:0;
+vertical-align:bottom;
+}
+
+hr{
+display:none;
+}
+
+input{
+vertical-align:middle;
+}
+
+option{
+padding:1px 5px;
+}
+
+sup,
+sub {
+height: 0;
+line-height: 1;
+vertical-align: baseline;
+position: relative;
+}
+sup {
+bottom: 1ex;
+}
+sub {
+top:0.5ex;
+}
+
+a{
+color:#0000ff;
+text-decoration:none;
+}
+a:hover {
+text-decoration:underline;
+}
+a:visited {
+color:#800080;
+text-decoration:none;
+}
+
+.marginBOff {
+  margin-bottom:0 !important;
+}
+
+/* ========== clearfix ========== */
+.clearfix{
+zoom:1;
+}
+
+.clearfix:after{
+height:0;
+display:block;
+clear:both;
+visibility:hidden;
+content:".";
+line-height:0; 
+}

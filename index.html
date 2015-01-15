@@ -1,10 +1,136 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<title>テスト</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>ALICEMAGIC</title>
+<link rel="stylesheet" href="common/css/import.css" media="screen, print">
+<link rel="stylesheet" href="common/css/jquery.fullPage.css" media="screen, print">
+<link rel="stylesheet" href="common/css/home.css" media="screen, print">
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src="common/js/jquery.fullPage.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+					$('#footer').addClass('active');
+
+		$('#fullpage').fullpage({
+			'resize' : true,
+			'anchors': ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
+			'verticalCentered': false,
+			'css3': true,
+			'continuousVertical': true,
+
+			'afterLoad': function(anchorLink, index){
+				if(anchorLink == 'secondPage'){
+					$('#iphone3, #iphone2, #iphone4').addClass('active');
+				} else if(anchorLink == 'firstPage'){
+					$('#footer').addClass('active');
+					start01();
+				}
+			},
+
+
+			'onLeave': function(index, nextIndex, direction){
+				if(index == 1){
+					$('#section0-ms').removeClass('active');
+				}
+			}
+		});
+
+
+		start01();
+		
+
+		function start01() {
+			$(".active#section0 .sectionContents").delay(1000).animate({"opacity":"0"},0,function(){
+				start02();
+				start03();
+			});
+		}
+		function start02() {
+			$(".active#section0").css('background-image', 'url(imgs/bg1.jpg)');
+		}
+
+		function start03() {
+			$(".active#section0 .sectionContents").delay(1000).animate({"opacity":"1"},1000);
+		}
+
+
+
+	});
+</script>
+
+
 </head>
-<body>
-<p>テストです</p>
+<body id="home">
+
+
+<div id="header">Header</div>
+<div id="footer">
+	<div id="footerContents">
+		<p id="nextBtn">&nbsp;</p>
+	</div>
+</div>
+
+
+
+
+
+
+<div id="fullpage">
+
+<div id="fullpageWrapper">
+
+	<div class="section " id="section0">
+		<div class="sectionContents">
+			<h1>ダミーテキスト</h1>
+			<p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+		</div>
+	</div>
+
+	<div class="section" id="section1">
+		<div id="section1-ms">
+			<h1>ダミーテキスト</h1>
+			<p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+		</div>
+		<div id="section1-enter">
+			<p>enter</p>
+		</div>
+	</div>
+
+	<div class="section moveDown" id="section2">
+		<div id="section2-ms">
+			<h1>ダミーテキスト</h1>
+			<p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+		</div>
+		<div id="section2-enter">
+			<p>enter</p>
+		</div>
+	</div>
+
+	<div class="section moveDown" id="section3">
+		<div id="section3-ms">
+			<h1>ダミーテキスト</h1>
+			<p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+		</div>
+		<div id="section3-enter">
+			<p>enter</p>
+		</div>
+	</div>
+
+</div>
+</div>
+
+
+
 </body>
 </html>
