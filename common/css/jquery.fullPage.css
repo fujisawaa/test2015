@@ -92,7 +92,7 @@ html, body {
     position: fixed;
     z-index: 100;
     margin-top: -32px;
-    top: 50%;
+    bottom:100px;
     opacity: 1;
 }
 #fp-nav.right {

@@ -9,127 +9,137 @@
 <link rel="stylesheet" href="common/css/import.css" media="screen, print">
 <link rel="stylesheet" href="common/css/jquery.fullPage.css" media="screen, print">
 <link rel="stylesheet" href="common/css/home.css" media="screen, print">
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script src="common/js/jquery.fullPage.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-
-					$('#footer').addClass('active');
-
-		$('#fullpage').fullpage({
-			'resize' : true,
-			'anchors': ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
-			'verticalCentered': false,
-			'css3': true,
-			'continuousVertical': true,
-
-			'afterLoad': function(anchorLink, index){
-				if(anchorLink == 'secondPage'){
-					$('#iphone3, #iphone2, #iphone4').addClass('active');
-				} else if(anchorLink == 'firstPage'){
-					$('#footer').addClass('active');
-					start01();
-				}
-			},
-
-
-			'onLeave': function(index, nextIndex, direction){
-				if(index == 1){
-					$('#section0-ms').removeClass('active');
-				}
-			}
-		});
-
-
-		start01();
-		
-
-		function start01() {
-			$(".active#section0 .sectionContents").delay(1000).animate({"opacity":"0"},0,function(){
-				start02();
-				start03();
-			});
-		}
-		function start02() {
-			$(".active#section0").css('background-image', 'url(imgs/bg1.jpg)');
-		}
-
-		function start03() {
-			$(".active#section0 .sectionContents").delay(1000).animate({"opacity":"1"},1000);
-		}
-
-
-
-	});
-</script>
-
-
+<script src="common/js/home.js"></script>
+<script src="common/js/gnav.js"></script>
 </head>
 <body id="home">
 
-
-<div id="header">Header</div>
-<div id="footer">
-	<div id="footerContents">
-		<p id="nextBtn">&nbsp;</p>
+<!--=================== LOADING ===================-->
+<div id="loader-bg">
+	<div id="loader">
+		<img src="images/icon_a.png" width="28" height="28" alt="Now Loading..." />
 	</div>
 </div>
 
+<div id="visualSlide">
+	<ul>
+		<li><img src="images/bg1.jpg" alt=""></li>
+		<li><img src="images/bg2.jpg" alt=""></li>
+		<li><img src="images/bg3.jpg" alt=""></li>
+		<li><img src="images/bg4.jpg" alt=""></li>
+		<li><img src="images/bg5.jpg" alt=""></li>
+		<li><img src="images/bg6.jpg" alt=""></li>
+	</ul>
+</div>
+<!--=================== LOADING ===================-->
 
+<div id="wrapper">
+<!--=================== HEADER ===================-->
+<div id="header">
+	<div id="headerContents">
+			<div id="dropMenu">
+				<nav>
+					<ul id="gmenu">
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
+				</nav>
+			</div>
+		<div id="headerContentsLeft">
+			<div id="btnMenu"><a class="btnMenu" href="#"><img src="common/images/btn_menu.png" alt=""></a></div>
+			<div id="copy01"><img src="common/images/txt_copy01.png" alt=""></div>
+		</div>
+		<div id="btnEntry"><img src="common/images/btn_entry.png" alt=""></div>	
+	</div>
+</div>
+<!--=================== HEADER ===================-->
 
+<!--=================== FOOTER ===================-->
+<div id="footer">
+	<div id="footerContents">
+		<p id="nextBtn">&nbsp;</p>
+		<div id="footerContentsBottom">
+			<div id="logo"><img src="common/images/logo.png" alt=""></div>
+			<ul id="fmenu">
+				<li><a href="#"><img src="common/images/fmenu_about.png" alt=""></a></li>
+				<li><a href="#"><img src="common/images/fmenu_privacy.png" alt=""></a></li>
+				<li><a href="#"><img src="common/images/fmenu_rule.png" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--=================== FOOTER ===================-->
 
-
-
+<!--=================== CONTENTS ===================-->
 <div id="fullpage">
 
 <div id="fullpageWrapper">
 
 	<div class="section " id="section0">
 		<div class="sectionContents">
-			<h1>めっせーじ</h1>
-			<p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+			<div class="messege">
+				<h1><img src="images/sttl_01_02.png" alt=""></h1>
+				<p class="enter"><img src="images/btn_enter.png" alt="ENTER"></p>
+			</div>
 		</div>
 	</div>
 
 	<div class="section" id="section1">
-		<div id="section1-ms">
-			<h1>”しごと”</h1>
-			<p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
-		</div>
-		<div id="section1-enter">
-			<p>enter</p>
-		</div>
-	</div>
-
-	<div class="section moveDown" id="section2">
-		<div id="section2-ms">
-			<h1>ダミーテキスト</h1>
-			<p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
-		</div>
-		<div id="section2-enter">
-			<p>enter</p>
+		<div class="sectionContents">
+			<div class="messege">
+				<h1><img src="images/sttl_02_02.png" alt=""></h1>
+				<p class="enter"><img src="images/btn_enter.png" alt="ENTER"></p>
+			</div>
 		</div>
 	</div>
 
-	<div class="section moveDown" id="section3">
-		<div id="section3-ms">
-			<h1>ダミーテキスト</h1>
-			<p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+	<div class="section" id="section2">
+		<div class="sectionContents">
+			<div class="messege">
+				<h1><img src="images/sttl_03_02.png" alt=""></h1>
+				<p class="enter"><img src="images/btn_enter.png" alt="ENTER"></p>
+			</div>
 		</div>
-		<div id="section3-enter">
-			<p>enter</p>
+	</div>
+
+	<div class="section" id="section3">
+		<div class="sectionContents">
+			<div class="messege">
+				<h1><img src="images/sttl_04_02.png" alt=""></h1>
+				<p class="enter"><img src="images/btn_enter.png" alt="ENTER"></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="section4">
+		<div class="sectionContents">
+			<div class="messege">
+				<h1><img src="images/sttl_04_02.png" alt=""></h1>
+				<p class="enter"><img src="images/btn_enter.png" alt="ENTER"></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="section5">
+		<div class="sectionContents">
+			<div class="messege">
+				<h1><img src="images/sttl_04_02.png" alt=""></h1>
+				<p class="enter"><img src="images/btn_enter.png" alt="ENTER"></p>
+			</div>
 		</div>
 	</div>
 
 </div>
 </div>
-
+<!--=================== CONTENTS ===================-->
+</div><!-- /#wrapper -->
 
 
 </body>

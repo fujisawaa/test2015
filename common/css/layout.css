@@ -1,4 +1,74 @@
 @charset "utf-8";
 
 
+h1{
+font-size: 5em;
+font-family: arial,helvetica;
+margin:0;
+padding:0;
+}
+h2{
+font-size: 2em;
+margin: 0 0 18px 0;
+font-family: arial,helvetica;
+}
 
+
+/* Fixed header and footer.
+* --------------------------------------- */
+#header{
+position:fixed;
+display:block;
+width: 100%;
+text-align:center;
+color: #f2f2f2;
+z-index:6000;
+height:101px;
+}
+
+#header{
+top:0px;
+background:#fff;
+}
+
+#headerContents {
+width:1000px;
+margin:0 auto;
+position:relative;
+clear:both;
+overflow:hidden;
+}
+
+#headerContentsLeft {
+float:left;
+}
+
+#btnMenu {
+float:left;
+margin-right:30px;
+}
+
+#copy01 {
+float:left;
+}
+
+#btnEntry {
+position:absolute;
+right:0;
+}
+
+
+/* gmenu
+* --------------------------------------- */
+#gmenu {
+overflow:hidden;
+clear:both;
+display:none;
+}
+#gmenu li {
+width:298px;
+height:115px;
+float:left;
+background:red;
+border:solid 1px #000;
+}
