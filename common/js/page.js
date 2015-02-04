@@ -2,37 +2,46 @@
 
 $(function(){
 
-
-	var scrollDisp = $(".sectionLv01");
-	delayHeight = 100;
-
-	scrollDisp.css({opacity:'0'});
+	$(window).on('load',function(){
 	$('html, body').animate({scrollTop:0},1);
-
+	$('#ttlArea-Right').css({display:'none'});
+	});
 
 	$(window).on('load scroll resize', function(){
 
 		scrTop = $(window).scrollTop(); //スクロール量
-		winHeight = $(window).height(); //ブラウザ縦サイズ
-		scrBottom = scrTop + winHeight;
+		winHeight = $(window).height(); //ウィンドウの高さ
+		scrBottom = scrTop + winHeight; //スクロールバーの下
 
-		console.log("scrBottom："+ scrBottom);
+		ttlAreaCH = $('#ttlAreaContents02').height();//ttlAreaにくっついていて欲しい
+		startrr01 = $('#section01').offset().top - ttlAreaCH - 55;
+		startrr02 = 240;
+		console.log(scrTop);
 
-		if(scrBottom < 1406){
-			$('#ttlAreaContents').css({position:'fixed',top:'101px'});
+		//ttlAreaエレベーター
+		if(scrTop < startrr01){
+			$('#ttlAreaContents').css({position:'fixed',top:'55px'});
 		}else {
-			$('#ttlAreaContents').css({position:'absolute',top:'auto'});
+			$('#ttlAreaContents').css({position:'absolute',top:'auto',bottom:'0'});
 		}
 
-		scrollDisp.each(function(){
-			var setThis = $(this), //.sectionLv01
-			elmTop = setThis.offset().top, //.sectionLv01の上からの位置
-			elmHeight = setThis.height(); ////.sectionLv01の高さ
-			if(scrTop > elmTop - winHeight + delayHeight && scrTop < elmTop + elmHeight){
-				setThis.stop().animate({opacity:'1'}, 500);
-			}else if(scrTop < elmTop - winHeight + delayHeight && scrTop < elmTop + delayHeight){
-				setThis.stop().animate({opacity:'0'}, 500);
+		//紹介部分のフェード
+		if(scrTop < startrr02){
+			$('#ttlArea-Right').css({display:'block'}).addClass('hide');
+		}else {
+			$('#ttlArea-Right').removeClass('hide');
+		}
+
+		//コンテンツ部分のフェード
+		$('.sectionLv01').each(function(){
+			elmTop = $(this).offset().top;
+			elmHeight = $(this).height();
+			if(scrTop < elmTop -elmHeight -400){
+				$(this).addClass('hide');
+			}else{
+				$(this).removeClass('hide');
 			}
+	
 		});
 
 	});

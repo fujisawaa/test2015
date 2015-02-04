@@ -21,14 +21,13 @@ position:fixed;
 display:block;
 width: 100%;
 text-align:center;
-color: #f2f2f2;
+background-color:rgba(255,255,255,0.8);
 z-index:6000;
-height:101px;
+border-bottom:solid 1px #e6e5e5;
 }
 
 #header{
 top:0px;
-background:#fff;
 }
 
 #headerContents {
@@ -41,6 +40,7 @@ overflow:hidden;
 
 #headerContentsLeft {
 float:left;
+padding:7px 0;
 }
 
 #btnMenu {
@@ -50,12 +50,68 @@ margin-right:30px;
 
 #copy01 {
 float:left;
+margin-right:165px;
+}
+
+#logo {
+float:left;
 }
 
 #btnEntry {
 position:absolute;
 right:0;
+padding:7px 0;
 }
+
+#nextBtn {
+position:absolute;
+bottom:20px;
+}
+
+/* footer------------- */
+
+ #footer{
+position:fixed;
+display:block;
+width: 100%;
+z-index:6000;
+font-size:11px;
+}
+
+#footer{
+bottom:0px;
+background-color:rgba(0,0,0,0.5);
+}
+
+#footer a,
+#footer a:hover {
+color:#fff;
+}
+
+#footerContents {
+width:900px;
+color: #f2f2f2;
+margin:5px auto;
+font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+#footerContentsBottom {
+clear:both;
+overflow:hidden;
+}
+#copyRight {
+float:left;
+}
+#fmenu {
+float:right;
+margin-bottom:0;
+}
+
+#fmenu li {
+display:inline-block;
+margin-left:30px;
+}
+
 
 
 /* gmenu
@@ -64,11 +120,52 @@ right:0;
 overflow:hidden;
 clear:both;
 display:none;
+background: #000;
+padding-bottom: 20px;
+margin-bottom: 50px;
 }
 #gmenu li {
-width:298px;
-height:115px;
+width:332px;
+height:220px;
 float:left;
-background:red;
-border:solid 1px #000;
+background:url(../images/bg_gnavi.jpg) no-repeat 0 0;
 }
+
+#gmenu li.gmenu01 {
+background-position:0 0;
+border-right:2px solid #000;
+border-bottom:2px solid #000;
+}
+
+#gmenu li.gmenu02 {
+background-position:-334px 0;
+border-bottom:2px solid #000;
+}
+
+#gmenu li.gmenu03 {
+background-position:-668px 0;
+border-left:2px solid #000;
+border-bottom:2px solid #000;
+}
+
+#gmenu li.gmenu04 {
+background-position:0 -222px;
+border-right:2px solid #000;
+}
+
+#gmenu li.gmenu05 {
+background-position:-334px -222px;
+}
+
+#gmenu li.gmenu06 {
+background-position:-668px -222px;
+border-left:2px solid #000;
+}
+
+
+#gmenu li.gmenu01:hover {background-position: 0 -444px;}
+#gmenu li.gmenu02:hover {background-position: -334px -444px;}
+#gmenu li.gmenu03:hover {background-position: -668px -444px;}
+#gmenu li.gmenu04:hover {background-position: 0 -666px;}
+#gmenu li.gmenu05:hover {background-position:  -334px -666px;}
+#gmenu li.gmenu06:hover {background-position: -668px -666px;}

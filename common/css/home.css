@@ -1,42 +1,5 @@
 @charset "utf-8";
 
-/* footer------------- */
-
- #footer{
-position:fixed;
-display:block;
-width: 100%;
-text-align:center;
-color: #f2f2f2;
-z-index:6000;
-}
-
-#footer{
-background-color:#fff;
-height: 54px;
-bottom:0px;
-}
-
-#footerContents {
-width:900px;
-margin:0 auto;
-}
-
-#footerContentsBottom {
-clear:both;
-overflow:hidden;
-}
-#logo {
-float:left;
-}
-#fmenu {
-float:right;
-}
-
-#fmenu li {
-display:inline-block;
-margin-left:30px;
-}
 
 
 /* Common styles
@@ -114,6 +77,26 @@ left:0;
 
 .section .enter {
 opacity:0;
+}
+
+.enter {
+width:40px;
+height:40px;
+text-indent:-9999px;
+background:url(../../images/bg_btn_enter.png) no-repeat left top;
+border:5px solid red;
+border-radius:2px;
+margin:0 auto;
+-webkit-transition: all 0.1s linear;
+-moz-transition: all 0.1s linear;
+-o-transition: all 0.1s linear;
+-ms-transition: all 0.1s linear;
+transition: all 0.1s linear;
+}
+
+.enter:hover {
+background-position:0 -40px;
+background-color:red;
 }
 
 

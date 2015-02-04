@@ -1,12 +1,59 @@
 @charset "utf-8";
 
+ #footer{
+position:relative;
+}
+
+#footerContents {
+margin: 0 auto;
+}
+
+#clientList {
+background:#fce6e7;
+}
+
+#clientList h3 {
+background:#e1000e;
+margin-bottom:30px;
+color:#fff;
+font-size:16px;
+padding:15px;
+}
+
+#clientList h3 div {
+width:760px;
+margin:0 auto;
+}
+
+#clientList>ul {
+margin:0 auto;
+display:table;
+width:760px;
+table-layout:fixed;
+}
+
+#clientList>ul>li>ul {
+margin-bottom:10px;
+}
+
+#clientList>ul>li>ul>li{
+list-style-type: disc
+}
+
+#clientList ul .left,
+#clientList ul .right {
+display:table-cell;
+vertical-align:top;
+}
+
 #mainContents {
-padding-top:101px;
+padding-top:55px;
 }
 
 
 #page #mainContents h1 {
 text-align:center;
+margin-bottom:56px;
 }
 
 
@@ -16,8 +63,7 @@ text-align:center;
 }
 
 #ttlArea{
-height:1000px;
-border:solid 1px orange;
+height:2000px;
 position:relative;
 }
 
@@ -26,11 +72,19 @@ width:1000px;
 margin:0 auto;
 overflow:hidden;
 clear:both;
-border:solid 1px #cfcfcf;
 position:absolute;
-bottom:0;
+top:55px;
 left:50%;
 margin-left:-500px;
+}
+
+#ttlAreaContents h2{
+margin-top:30px;
+}
+
+#ttlAreaContents02 {
+overflow:hidden;
+clear:both;
 }
 
 .sectionLv02 {
@@ -38,11 +92,12 @@ width:1000px;
 margin:0 auto;
 overflow:hidden;
 clear:both;
+min-height:500px;
 }
 
 #ttlArea-left {
 float:left;
-width:620px;
+width:600px;
 }
 
 #ttlArea-left {
@@ -52,9 +107,80 @@ width:620px;
 
 #ttlArea-Right {
 float:right;
-width:300px;
+width:250px;
+margin-bottom:100px;
+position:relative;
+right:0;
+font-size:11px;
+-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-ms-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+}
+
+#ttlArea-Right.hide{
+right:-50px;
+}
+
+.hide {
+opacity:0;
+}
+
+#ttlArea-Right .images {
+margin-bottom:20px;
+}
+
+#ttlArea-Right .shokai {
+border-bottom:solid 1px red;
+margin-top: 20px;
+padding-bottom: 2px;
+}
+
+#ttlArea-Right .shokai .name {
+display:block;
+font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+font-size:16px;
+
 }
 
 .sectionLv01 {
 margin-bottom:20px;
+position:relative;
+top:0;
+-webkit-transition: all 1s;
+-moz-transition: all 1s;
+-ms-transition: all 1s;
+-o-transition: all 1s;
+transition: all 1s;
 }
+
+.sectionLv01.hide {
+top:50px;
+}
+
+.colum2 {
+display:table;
+table-layout: fixed;
+width:100%;
+}
+
+.colum2 .block,.colum2 .image{
+display:table-cell;
+vertical-align:middle;
+text-align:left;
+}
+
+#page .sectionLv02 {
+width:760px;
+margin:030px auto;
+}
+
+.taidan dt {
+font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.taidan dd {
+margin-bottom:25px;
+}
+
